@@ -24,7 +24,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final LogoutUseCase logoutUseCase;
 
   AuthBloc(this.getSignedInUser, this.logoutUseCase, this.getFirstTimeLogged,
-      this.setFirstTimeLogged, this.getSignedInWithGoogleUseCase)
+      this.setFirstTimeLogged, this.getSignedInWithGoogleUseCase, this.setSignedInWithGoogleUseCase)
       : super(AuthInitial()) {
     on<AuthSetFirstTimeLogged>((event, emit) {
       setFirstTimeLogged(SetFirstTimeLoggedUseCaseParams(

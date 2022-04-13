@@ -111,7 +111,8 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
       get<_i22.LogoutUseCase>(),
       get<_i18.GetFirstTimeLoggedUseCase>(),
       get<_i23.SetFirstTimeLoggedUseCase>(),
-      get<_i20.GetSignedInWithGoogleUseCase>()));
+      get<_i20.GetSignedInWithGoogleUseCase>(),
+      get<_i24.SetSignedInWithGoogleUseCase>()));
   gh.factory<_i28.LogoutRemoteBloc>(() => _i28.LogoutRemoteBloc(
       logoutRemoteUseCase: get<_i21.LogoutRemoteUseCase>()));
   gh.factory<_i29.SignInWithEmailBloc>(() =>
