@@ -1,0 +1,23 @@
+{
+  "forget_password?": "FORGET PASSWORD?",
+  "email": "EMAIL",
+  "example@example.com": "example@example.com",
+  "password": "PASSWORD",
+  "sign_in_with_google" : "SIGN IN WITH GOOGLE",
+  "sign_in_with_email" : "SIGN IN WITH EMAIL",
+  "signed_in_with_google" : "SIGNED IN WITH GOOGLE",
+  "signed_in_with_email" : "SIGNED IN WITH EMAIL",
+  "or" : "OR",
+  "unauthenticated_message": "UN AUTHENTICATED",
+  "access_denied_message": "ACCESS DENIED MESSAGE",
+  "password_verified_length_msg": "PASSWORD MUST BE AT LEAST 8 DIGITS LONG.",
+  "password_verified_special_character_msg": "PASSWORD MUST HAVE AT LEAST ONE SPECIAL CHARACTER.",
+  "field_required_message": "THIS FIELD IS REQUIRED.",
+  "invalid_email_error_message": "PLEASE ENTER VALID EMAIL.",
+  "error_message": "Something went wrong, please try again.",
+  "no_internet_connection_message": "NO INTERNET, PLEASE CHECK YOUR CONNECTION.",
+  "logged_in" : "Logged in",
+  "welcome" : "Welcome",
+  "do_not_have_an_account?" : "Don't have an account?",
+  "sign_up" : "Sign Up"
+}
