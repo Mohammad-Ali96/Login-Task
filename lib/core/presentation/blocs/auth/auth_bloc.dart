@@ -8,6 +8,7 @@ import 'package:login_task/features/auth/domain/usecases/logout_use_case.dart';
 import 'package:login_task/features/auth/domain/usecases/set_first_time_logged_use_case.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
+import 'package:login_task/features/auth/domain/usecases/set_signed_in_with_google_use_case.dart';
 
 part 'auth_event.dart';
 
@@ -19,6 +20,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final GetFirstTimeLoggedUseCase getFirstTimeLogged;
   final GetSignedInWithGoogleUseCase getSignedInWithGoogleUseCase;
   final SetFirstTimeLoggedUseCase setFirstTimeLogged;
+  final SetSignedInWithGoogleUseCase setSignedInWithGoogleUseCase;
   final LogoutUseCase logoutUseCase;
 
   AuthBloc(this.getSignedInUser, this.logoutUseCase, this.getFirstTimeLogged,
@@ -48,7 +50,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     );
 
     on<AuthLogin>(
-      (event, emit) {
+      (event, emit) async{
+        emit(AuthLoading());
+        await setSignedInWithGoogleUseCase(SetSignedWithGoogleUseCaseParams(
+          isSignedInWithGoogle: event.isSignedWithGoogle
+        ));
         emit(Authenticated(event.user, event.isSignedWithGoogle));
       },
     );

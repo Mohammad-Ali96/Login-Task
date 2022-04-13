@@ -6,7 +6,7 @@ import 'package:injectable/injectable.dart';
 
 @lazySingleton
 class SetSignedInWithGoogleUseCase
-    extends UseCase<void, SetFirstTimeLoggedUseCaseParams> {
+    extends UseCase<void, SetSignedWithGoogleUseCaseParams> {
   final AuthRepository authRepository;
 
   SetSignedInWithGoogleUseCase(this.authRepository);
@@ -17,8 +17,8 @@ class SetSignedInWithGoogleUseCase
   }
 }
 
-class SetFirstTimeLoggedUseCaseParams {
+class SetSignedWithGoogleUseCaseParams {
   final bool isSignedInWithGoogle;
 
-  SetFirstTimeLoggedUseCaseParams({required this.isSignedInWithGoogle});
+  SetSignedWithGoogleUseCaseParams({required this.isSignedInWithGoogle});
 }
